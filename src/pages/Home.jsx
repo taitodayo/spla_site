@@ -1,43 +1,51 @@
 import { Link } from "react-router-dom";
-import "../styles.css"
+import "../styles.css";
 
 const categories = [
-    {
-        title: "ブキランダム",
-        description: "ブキランダムはココ",
-        path: "/random",
-    },
+  {
+    title: "武器ランダム",
+    description: "ランダムな武器を選ぼう！",
+    path: "/random",
+    icon: "🎲",
+  },
+  {
+    title: "お気に入り",
+    description: "お気に入りの武器を管理しよう！",
+    path: "/favorites",
+    icon: "⭐",
+  },
 ];
 
-
 function Home() {
-    return (
-        <main className="home">
-            <header className="home_header">
-                <p className="site_label">ブキランダム</p>
-                <h1>カテゴリを選択</h1>
-                <p className="home_description">カテゴリを選択してください</p>
-            </header>
+  return (
+    <main className="home">
+      <header className="home-header">
+        <p className="site-label">WEAPON RANDOM</p>
+        <h1>カテゴリを選択</h1>
+        <p className="home-description">
+          遊びたいモードを選んでください。
+        </p>
+      </header>
 
-            <section className="category-grid">
-                {categories.map((category) => (
-                <Link
-                    to={category.path}
-                    className="category-card"
-                    key={category.path}
-                >
-                    <span className="category-icon">{category.icon}</span>
+      <section className="category-grid">
+        {categories.map((category) => (
+          <Link
+            to={category.path}
+            className="category-card"
+            key={category.path}
+          >
+            <span className="category-icon">{category.icon}</span>
 
-                    <h2>{category.title}</h2>
+            <h2>{category.title}</h2>
 
-                    <p>{category.description}</p>
+            <p>{category.description}</p>
 
-                    <span className="card-arrow">→</span>
-                </Link>
-                ))}
-            </section>
-        </main>
-    );
+            <span className="card-arrow">→</span>
+          </Link>
+        ))}
+      </section>
+    </main>
+  );
 }
 
 export default Home;
