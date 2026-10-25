@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #10131a;
+  color: #ffffff;
+}
+
+.home {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.home-header {
+  margin-bottom: 40px;
+}
+
+.site-label {
+  color: #8b9cff;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.home-header h1 {
+  margin: 12px 0;
+  font-size: clamp(30px, 5vw, 44px);
+}
+
+.home-description {
+  color: #a9afbd;
+  line-height: 1.7;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.category-card {
+  position: relative;
+  display: block;
+  padding: 28px;
+  min-height: 200px;
+  border: 1px solid #303746;
+  border-radius: 18px;
+  background: #1a1f2b;
+  color: #ffffff;
+  text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  border-color: #8b9cff;
+  background: #22293a;
+}
+
+.category-icon {
+  font-size: 32px;
+}
+
+.category-card h2 {
+  margin: 20px 0 8px;
+  font-size: 22px;
+}
+
+.category-card p {
+  margin: 0;
+  color: #a9afbd;
+  line-height: 1.6;
+}
+
+.card-arrow {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  color: #8b9cff;
+  font-size: 24px;
+}
+
+@media (max-width: 600px) {
+  .home {
+    padding: 40px 0;
+  }
+}
